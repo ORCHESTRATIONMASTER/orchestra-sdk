@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.5'
+VERSION = '0.0.6'
 DESCRIPTION = 'Logging module to enable orchestration on self-hosted applications'
 LONG_DESCRIPTION = 'A logging-like module to be implemented on self-hosted applications that allows Orchestra to coordinate tasks and gather metadata'
 
