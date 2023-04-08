@@ -23,5 +23,11 @@ setup(
     packages=find_packages(),
     install_requires=[],
     keywords=['python', 'logging', 'data', 'orchestration'],
-    classifiers=[    ]
+    classifiers=[
+        'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
+        'Intended Audience :: Data engineers',      # Define that your audience are developers
+        'Topic :: Software Development :: Build Tools',
+        'License :: OSI Approved :: MIT License',   # Again, pick a license
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9']
 )
