@@ -1,7 +1,4 @@
 import requests
-import asyncio
-from datetime import datetime
-
 
 class HTTP:
     def __init__(self, base_url):
@@ -18,7 +15,6 @@ class HTTP:
                 **self.headers,
                 **new_headers
             }
-
         self.headers = new_headers
 
     def base_request(self, endpoint, method="POST", params=None, headers=None, body=None, data=None):
@@ -27,10 +23,10 @@ class HTTP:
             full_url = f"{full_url}/{endpoint}"
         if headers:
             self.add_headers(headers)
-        print(self.headers)
         try:
             response = requests.request(method, full_url, params=params, headers=self.headers, json=body,
                                         data=data)
+            print(response)
             return {**response.json(), **{'status_code': response.status_code, 'reason': response.reason}}
 
         except Exception as error:

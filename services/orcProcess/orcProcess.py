@@ -1,7 +1,6 @@
 import inspect
 from services.orchttp.orchttp import orcHTTP
 
-
 class orcProcess():
     def __init__(self, correlation_id:str, credentials:dict):
         self.correlation_id = correlation_id
@@ -15,9 +14,8 @@ class orcProcess():
         message = f'Orc process with correlation id {self.correlation_id} started'
         status = 'Running'
         data = {}
-        print(self.correlation_id)
-        self.sendMessage(message=message, status=status, data=data)
-        pass
+        stage = inspect.stack()[1][3]
+        return self.sendMessage(message=message, status=status, stage=stage, data=data)
 
     def sendMessage(self, message: str, status: str, stage: str, data: dict):
         data = {**data, **{'message':message, 'status':status, 'stage': stage}}
@@ -39,7 +37,6 @@ class orcProcess():
         function_name__ = inspect.stack()[1][3]
         data['function'] = function_name__
         return self.sendMessage(message=message, status=status, stage=stage, data=data)
-
 
     def sendStageComplete(self, message, data):
         """Use this function to send a failure event for an entire process"""
