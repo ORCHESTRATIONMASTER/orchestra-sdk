@@ -1,4 +1,4 @@
-from services.http.http import HTTP
+from src.services.http.http import HTTP
 
 class orcHTTP(HTTP):
     def __init__(self, creds):
@@ -13,6 +13,7 @@ class orcHTTP(HTTP):
 
     def send_message(self, correlation_id, data):
         data['correlation_id'] = correlation_id
+        print(data)
         response = self.base_request(method='POST', endpoint='integrations/selfhosted/log_event', data = data)
         return response
 

@@ -1,7 +1,7 @@
 import sys
 import logging
 import inspect
-from services.orcProcess import orcProcess
+from src.services.orcProcess import orcProcess
 
 class orcLogger():
     def __init__(self, name=""):
