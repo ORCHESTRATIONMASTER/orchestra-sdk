@@ -1,5 +1,6 @@
 import inspect
 from src.services.orchttp.orchttp import orcHTTP
+from datetime import datetime
 
 class orcProcess():
     def __init__(self, correlation_id:str, credentials:dict):
@@ -18,7 +19,8 @@ class orcProcess():
         return self.sendMessage(message=message, status=status, stage=stage, data=data)
 
     def sendMessage(self, message: str, status: str, stage: str, data: dict):
-        data = {**data, **{'message':message, 'status':status, 'stage': stage}}
+
+        data = {**data, **{'message':message, 'status':status, 'stage': stage, 'timeUTC':datetime.now()}}
         response = self.client.send_message(self.correlation_id, data)
         return response
 
