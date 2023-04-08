@@ -1,4 +1,4 @@
-from src.services.http.http import HTTP
+from orchestra_logger.services.http.http import HTTP
 
 class orcHTTP(HTTP):
     def __init__(self, creds):
