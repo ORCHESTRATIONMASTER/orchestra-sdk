@@ -1,24 +1,17 @@
-import sys
-import logging
+from orchestra_logger import orcProcess
 
-logger =logging.getLogger('Firstlogger')
+def run_example_process(correlation_id, creds):
+    orcProcessInstance = orcProcess(correlation_id, creds)
+    print('Starting complicated process')
+    try:
+        print('Trying something complicated')
+        raise Exception
+    except Exception as e:
+        print('Failed to do something complicated')
+        orcProcessInstance.sendFailure(message = str(e), data={'some':'arbitrary stuff'})
+    finally:
+        print('Completed')
+        orcProcessInstance.sendCompletion(message = 'Completed')
 
-version = sys.version_info[:2]
-
-if version == (3, 9) or version == (3, 5):
-    logger.warning(
-        "sentry-sdk 2.0.0 will drop support for Python %s.",
-        "{}.{}\nPlease upgrade to the latest version to continue receiving upgrades and bugfixes".format(*version)
-    )
-
-import inspect
-
-def foo():
-   print(inspect.stack()[0][3])
-   print(inspect.stack()[1][3])  # will give the caller of foos name, if something called foo
-   print(inspect.stack()[2][3])  # will give the caller of foos name, if something called foo
-
-def cuntof():
-    foo()
-
-cuntof()
+creds = {'apikey':'my_api_key'}
+run_example_process('hello', creds)
