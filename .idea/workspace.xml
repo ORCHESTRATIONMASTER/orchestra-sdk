@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04193d5a-3773-4ce5-a9d5-d3d51fd1a702" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/orchestra_logger/orclogger/orclogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/orchestra_logger/orclogger/orclogger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/orchestra-logger-0.0.9.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/orchestra-logger-0.0.9.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orchestra_logger.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/orchestra_logger.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
