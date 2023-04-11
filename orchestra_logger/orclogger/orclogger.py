@@ -1,6 +1,5 @@
 import sys
 import logging
-import inspect
 from orchestra_logger.services.orcProcess.orcProcess import orcProcess
 
 class orcLogger():
