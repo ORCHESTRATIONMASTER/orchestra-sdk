@@ -13,7 +13,6 @@ class orcHTTP(HTTP):
 
     def send_message(self, correlation_id, data):
         data['correlation_id'] = correlation_id
-        print(data)
         response = self.base_request(method='POST', endpoint='integrations/selfhosted/log_event', data = data)
         return response
 

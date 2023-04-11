@@ -16,7 +16,7 @@ With your chosen version. The current version is 0.0.8.
 
 Next, head to orchestra_logger/example/example.py:
 ```
-from orchestra_logger import orcProcess
+from orchestra_logger.orcProcess.orcProcess import orcProcess
 
 def run_example_process(correlation_id, creds):
     orcProcessInstance = orcProcess(correlation_id, creds)
