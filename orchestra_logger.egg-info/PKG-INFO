@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: orchestra-logger
-Version: 0.0.11
+Version: 0.0.12
 Summary: Logging module to enable orchestration on self-hosted applications
 Author: Orchestra (Hugo Lu)
 Author-email: <hugo@getorchestra.io>
