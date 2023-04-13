@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 VERSION = '0.0.13'
 DESCRIPTION = 'Logging module to enable orchestration on self-hosted applications'
-
+ 
 # Setting up
 setup(
     name="orchestra-logger",
