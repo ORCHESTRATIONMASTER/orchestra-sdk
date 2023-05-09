@@ -16,7 +16,7 @@ With your chosen version. The current version is 0.0.8.
 
 Next, head to orchestra_logger/example/example.py:
 ```
-from orchestra_logger.orcProcess.orcProcess import orcProcess
+from orchestra_logger import orcProcess
 
 def run_example_process(correlation_id, creds):
     orcProcessInstance = orcProcess(correlation_id, creds)
@@ -26,13 +26,13 @@ def run_example_process(correlation_id, creds):
         raise Exception
     except Exception as e:
         print('Failed to do something complicated')
-        orcProcessInstance.sendFailure(message = str(e), data={'some':'arbitrary stuff'})
+        orcProcessInstance.sendFailure(message = str(e))
     finally:
         print('Completed')
-        orcProcessInstance.sendCompletion(message = 'Completed')
+        orcProcessInstance.sendCompletion(message = 'Completed', custom_data={'I sent this from':'my computer'})
 
-creds = {'apikey':'my_api_key'}
-run_example_process('hello', creds)
+creds = {'apikey':'my_api_key', 'clientid':'my_client_id'}
+run_example_process('correlation_id', creds)
 ```
 
 ### Summary
